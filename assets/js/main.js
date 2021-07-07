@@ -81,10 +81,10 @@ jQuery(function ($) {
 
     // スライダーで使う画像
     var bgArray = [
-      "assets/images/img/mv_01.jpg",
-      "assets/images/img/mv_02.jpg",
-      "assets/images/img/mv_03.jpg",
-      "assets/images/img/mv_04.jpg"
+      "assets/images/img/bg-1.jpg",
+      "assets/images/img/bg-2.jpg",
+      "assets/images/img/bg-3.jpg",
+      "assets/images/img/bg-4.jpg"
     ];
     // ここまで
 
