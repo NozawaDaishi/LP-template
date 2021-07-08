@@ -13,7 +13,8 @@
   bottom: 0;
   left: 0;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 1;
   overflow: hidden;
 }
@@ -28,7 +29,8 @@
   bottom: 0;
   left: 0;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 1;
   background-image: url(../images/img/overlay.png);
   opacity: .4;
@@ -43,7 +45,8 @@
   bottom: 0;
   left: 0;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: initial;
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,13 +65,15 @@
 
 @keyframes slides {
   100% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
 @-webkit-keyframes slides {
   100% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -105,3 +110,4 @@
 .section2 {
   background: #eee;
 }
+/*# sourceMappingURL=top.css.map */

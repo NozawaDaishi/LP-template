@@ -73,6 +73,7 @@ a {
   padding: 0;
   text-decoration: none;
   outline: none;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -97,8 +98,23 @@ input:focus {
   outline: none;
 }
 
-html, body {
+html,
+body {
   font-family: "Noto Sans JP", "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "meiryo", "MS Pゴシック", "MS PGothic", sans-serif;
+}
+
+body {
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE, Edge 対応 */
+  scrollbar-width: none;
+  /* Firefox 対応 */
+}
+
+body::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
 }
 
 a:hover {
@@ -110,7 +126,11 @@ img {
   pointer-events: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   letter-spacing: 1px;
 }
 
@@ -127,12 +147,14 @@ p {
   padding-left: 20px;
   width: 100%;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .fadeIn--btt {
   opacity: 0;
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   transition-duration: .4s;
   -webkit-transition-duration: .4s;
   transition-timing-function: linear;
@@ -140,7 +162,8 @@ p {
 }
 
 .fadeIn--btt.active {
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
   opacity: 1;
 }
 
@@ -161,7 +184,8 @@ p {
   bottom: 0;
   left: 50%;
   background: #04009a;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: initial;
 }
 
@@ -178,10 +202,16 @@ p {
 .btn {
   padding: 20px 30px 20px 40px;
   border-radius: 50px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  box-sizing: border-box;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn span {
@@ -263,7 +293,8 @@ p {
   bottom: 0;
   left: 0;
   background: #eeeeee;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 999;
   position: fixed;
 }
@@ -277,12 +308,20 @@ p {
   bottom: 0;
   left: 0;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: initial;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
 }
 
 .pageLoader__logo span {
@@ -356,7 +395,9 @@ p {
 }
 
 @-webkit-keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
+  0%,
+  70%,
+  100% {
     -webkit-transform: scale3D(1, 1, 1);
     transform: scale3D(1, 1, 1);
   }
@@ -367,7 +408,9 @@ p {
 }
 
 @keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
+  0%,
+  70%,
+  100% {
     -webkit-transform: scale3D(1, 1, 1);
     transform: scale3D(1, 1, 1);
   }
@@ -387,15 +430,23 @@ p {
   bottom: initial;
   left: initial;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 998;
 }
 
 .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
 }
 
 .header__left a span {
@@ -413,8 +464,12 @@ p {
 }
 
 .header__right nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__right nav ul li {
@@ -423,10 +478,17 @@ p {
 
 .header__right nav ul li a {
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header__right nav ul li a span {
@@ -475,10 +537,17 @@ p {
 }
 
 .footer__link nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
 }
 
 .footer__link nav ul li a {
@@ -522,14 +591,23 @@ p {
   bottom: 0;
   left: initial;
   background: #000000;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -552,10 +630,13 @@ p {
   bottom: initial;
   left: initial;
   background: initial;
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
   z-index: 998;
   position: fixed;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -571,10 +652,17 @@ p {
   width: 100%;
   height: 100%;
   background: #04009a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: initial;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
   cursor: pointer;
   z-index: 1000;
 }
@@ -582,15 +670,25 @@ p {
 .spMenu__trigger,
 .spMenu__trigger span {
   display: inline-block;
+  -webkit-transition: all .4s;
   transition: all .4s;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .spMenu__trigger {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .2s;
   transition: all .2s;
 }
 
@@ -646,3 +744,4 @@ p {
   color: #ffffff;
   font-size: 12px;
 }
+/*# sourceMappingURL=base.css.map */

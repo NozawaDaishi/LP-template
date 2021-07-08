@@ -72,6 +72,7 @@ a {
   padding: 0;
   text-decoration: none;
   outline: none;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -95,3 +96,4 @@ textarea:focus,
 input:focus {
   outline: none;
 }
+/*# sourceMappingURL=reset.css.map */
