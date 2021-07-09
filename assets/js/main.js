@@ -84,7 +84,8 @@ jQuery(function ($) {
       "assets/images/img/bg-1.jpg",
       "assets/images/img/bg-2.jpg",
       "assets/images/img/bg-3.jpg",
-      "assets/images/img/bg-4.jpg"
+      "assets/images/img/bg-4.jpg",
+      "assets/images/img/bg-5.jpg"
     ];
     // ここまで
 
